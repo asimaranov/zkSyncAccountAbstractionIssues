@@ -1473,8 +1473,8 @@
       ]
     },
     "/Users/andrey/projects/zkSyncAccountBugReproduction/contracts/LockedMoneyPOC.sol": {
-      "lastModificationDate": 1680811921776,
-      "contentHash": "f2cb0a0c22629cdbe827d2adfa1e5700",
+      "lastModificationDate": 1680816646369,
+      "contentHash": "be63fba6f8d5653a648265c2f371a813",
       "sourceName": "contracts/LockedMoneyPOC.sol",
       "solcConfig": {
         "version": "0.8.17",
