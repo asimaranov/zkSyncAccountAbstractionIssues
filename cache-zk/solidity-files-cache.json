@@ -1297,6 +1297,221 @@
       "artifacts": [
         "LibraryInVerificationBugAccount"
       ]
+    },
+    "/Users/andrey/projects/zkSyncAccountBugReproduction/contracts/RevertsWhenNetworkIsLoadedAccount.sol": {
+      "lastModificationDate": 1680033156021,
+      "contentHash": "7ba773b60b33d2ce1700ecd7520d7c30",
+      "sourceName": "contracts/RevertsWhenNetworkIsLoadedAccount.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.3.5",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {},
+            "isSystem": true
+          }
+        }
+      },
+      "imports": [
+        "@matterlabs/zksync-contracts/l2/system-contracts/interfaces/IAccount.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/libraries/TransactionHelper.sol",
+        "@openzeppelin/contracts/interfaces/IERC1271.sol",
+        "@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/libraries/SystemContractsCaller.sol",
+        "./BugLibrary.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "RevertsWhenNetworkIsLoadedAccount"
+      ]
+    },
+    "/Users/andrey/projects/zkSyncAccountBugReproduction/contracts/RevertsWhenNetworkIsLoadedFactory.sol": {
+      "lastModificationDate": 1680033424650,
+      "contentHash": "8155b83d4ee721649dcb1c7fdf57ca88",
+      "sourceName": "contracts/RevertsWhenNetworkIsLoadedFactory.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.3.5",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {},
+            "isSystem": true
+          }
+        }
+      },
+      "imports": [
+        "@matterlabs/zksync-contracts/l2/system-contracts/Constants.sol",
+        "@matterlabs/zksync-contracts/l2/system-contracts/libraries/SystemContractsCaller.sol",
+        "./RevertsWhenNetworkIsLoadedAccount.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "RevertsWhenNetworkIsLoadedFactory"
+      ]
+    },
+    "/Users/andrey/projects/zkSyncAccountBugReproduction/contracts/BatchFacet.sol": {
+      "lastModificationDate": 1680079444739,
+      "contentHash": "518c0303d82a590446c301a7db3d21c3",
+      "sourceName": "contracts/BatchFacet.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.3.5",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {},
+            "isSystem": true
+          }
+        }
+      },
+      "imports": [
+        "@openzeppelin/contracts/security/ReentrancyGuard.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "BatchFacet"
+      ]
+    },
+    "/Users/andrey/projects/zkSyncAccountBugReproduction/node_modules/@openzeppelin/contracts/security/ReentrancyGuard.sol": {
+      "lastModificationDate": 1680025841360,
+      "contentHash": "a8e2d1c30042f64ed89c9d4157eb6cb9",
+      "sourceName": "@openzeppelin/contracts/security/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.3.5",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {},
+            "isSystem": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/andrey/projects/zkSyncAccountBugReproduction/contracts/LockedMoneyPOC.sol": {
+      "lastModificationDate": 1680811921776,
+      "contentHash": "f2cb0a0c22629cdbe827d2adfa1e5700",
+      "sourceName": "contracts/LockedMoneyPOC.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": true
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        },
+        "zksolc": {
+          "version": "1.3.5",
+          "compilerSource": "binary",
+          "settings": {
+            "compilerPath": "",
+            "experimental": {},
+            "isSystem": true
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "DummyStakeCalculator",
+        "LockedMoneyPOC"
+      ]
     }
   }
 }
