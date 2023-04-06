@@ -4,6 +4,7 @@
 pragma solidity ^0.8.0;
 
 library DummyStakeCalculator {
+    /// Does nothing, but call to this function leads to transaction failure
     function calculateMoneyToWithdraw() external pure returns (uint256 money) {
         return 1337;
     }

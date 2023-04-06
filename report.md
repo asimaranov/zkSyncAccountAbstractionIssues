@@ -19,13 +19,22 @@ Findings
 ### Critical
 #### LOCKED_MONEY_WHEN_LIBRARY_FUNCTION_IS_CALLED
 ##### Description
-Library calls is some cases lead to transaction revertion. This is shown in [LockedMoneyPOC.sol](https://github.com/asimaranov/zkSyncAccountAbstractionIssues/blob/main/contracts/LockedMoneyPOC.sol) file. It contains the following function: 
+Library calls is some cases lead to transaction revertion. This is shown in [LockedMoneyPOC.sol](https://github.com/asimaranov/zkSyncAccountAbstractionIssues/blob/main/contracts/LockedMoneyPOC.sol) file. It contains the following code: 
 ```solidity
+library DummyStakeCalculator {
+    /// Does nothing, but call to this function leads to transaction failure
+    function calculateMoneyToWithdraw() external pure returns (uint256 money) {
+        return 1337;
+    }
+}
+
+contract LockedMoneyPOC {
     function withdrawMoney() public {
         /// Fails because of library function call. So money are locked within protocol. If call removed, this function starts to work.
         uint256 newRecoveryRequestCode = DummyStakeCalculator.calculateMoneyToWithdraw();
         /// Tokens or ether transfer from the protocol here
     } 
+}
 ```
 
 This function call reverts because of library call – `DummyStakeCalculator.calculateMoneyToWithdraw()`. If I remove this call, function is executed successfully. Script [deploy/deploy-locked-money-poc.ts](https://github.com/asimaranov/zkSyncAccountAbstractionIssues/blob/main/deploy/deploy-locked-money-poc.ts) contains demonstration of contract deployment and revert in `calculateMoneyToWithdraw` call. Can be launched using command `yarn hardhat compile && yarn hardhat deploy-zksync --script deploy/deploy-locked-money-poc.ts` 
