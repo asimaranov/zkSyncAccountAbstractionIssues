@@ -42,3 +42,9 @@ Compiler throws no errors or warnings. A project that supports multiple chains a
 
 ##### Recommendation
 Fix library `external pure` function calls revertion issue in zkSync 
+
+### Matter Labs comment
+
+When integrating these types of libraries in smart contracts, the library have to be deployed beforehand and configured in the `hardhat.config.ts` file as detailed [in this section of the docs](https://era.zksync.io/docs/api/hardhat/compiling-libraries.html).
+
+To prevent developers from compiling and deploying contracts with missing non-inlinable libraries as reported here, we're working on a change in our compiler to throw an error if it detects a contract is using libraries that were not deployed beforehand and properly configured. 
